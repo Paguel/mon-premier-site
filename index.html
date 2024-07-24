@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formation et excercices en Java-Script</title>
+</head>
+<body>
+
+    <script>
+
+            
+    // la condition if else
+
+    var nom = prompt("entrez votre nom");
+    let age = parseInt(prompt("entrez votre age"));
+    while(isNaN(age)){
+        age =
+        parseInt(prompt("desolé veillez saisir votre age svp"))
+    }
+    if (age >= 1 && age <= 17) {
+        alert("vous n'etes pas encore majeur car vous avez : " + age + " ans " + nom)
+    } else if (age >= 18 && age <= 49) {
+        alert("vous etes majeur mais pas senior car vous avez : " + age + " ans " + nom)
+    } else if (age >= 50 && age <= 59) {
+        alert("vous etes senior mais pas retraité car vous avez : " + age + " ans " + nom)
+    } else if (age >= 60 && age <= 120) {
+        alert("vous etes maintenant retraité car vous avez : " + age + " ans " + nom)
+    } else {
+        alert("votre age n'est pas reconnu dans le systeme")
+    }
+
+    // la calculatrice
+
+    var nombre1 = parseInt(prompt("entrez le premier nombre"));
+    while(isNaN(nombre1)){
+        nombre1 = 
+        parseInt(prompt("désolé entrez le premier nombre en chiffre svp"))
+    }
+    var nombre2 = parseInt(prompt("entrez le deuxieme nombre"));
+    while(isNaN(nombre2)){
+        nombre2 =
+        parseInt(prompt("désolé entrez le deuxieme nombre en chiffre svp"))
+    }
+    var operateur = prompt("entrez un operateur");
+    if (operateur == "-") {
+        resultat = nombre1 - nombre2
+        alert(" le resultat de " + nombre1 + operateur + nombre2 + " = " + resultat)
+    } else if (operateur == "+") {
+        resultat = nombre1 + nombre2
+        alert(" le resultat de " + nombre1 + operateur + nombre2 + " = " + resultat)
+    } else if (operateur == "*") {
+        resultat = nombre1 * nombre2
+        alert(" le resultat de " + nombre1 + operateur + nombre2 + " = " + resultat)
+    } else if (operateur == "/") {
+        resultat = nombre1 / nombre2
+        alert(" le resultat de " + nombre1 + operateur + nombre2 + " = " + resultat)
+    } else if (operateur == "%") {
+        resultat = nombre1 % nombre1
+        alert(" le resultat de " + nombre1 + operateur + nombre2 + " = " + resultat)
+    } else {
+        alert("l'operateur n'est pas reconnu par le systeme, choisisez donc soit(-, +, *, /) svp")
+    }
+
+    // l'incrementation
+
+    var a = 5;
+    a++
+    alert(a)
+
+    var a = 6;
+    a = a + 1
+    alert(a)
+
+    var a = 7;
+    a += 1
+    alert(a)
+
+    // décrémentation
+    
+    var a = 5;
+    a--
+    alert(a)
+
+    </script>
+
+</body>
+</html>
